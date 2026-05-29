@@ -132,6 +132,10 @@
   color: var(--cream);
 }
 
+.modal-field input[type="date"] {
+  color-scheme: dark;
+}
+
 .modal-field input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert(0.6) sepia(1) saturate(2) hue-rotate(5deg);
   cursor: pointer;
@@ -214,7 +218,23 @@
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 600px) {
-  .modal-panel { padding: 32px 24px; }
+  .modal-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+  .modal-panel {
+    padding: 32px 20px 40px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 6px 6px 0 0;
+    width: 100%;
+    max-width: 100%;
+    animation: sheetIn 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  @keyframes sheetIn {
+    from { transform: translateY(60px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+  }
   .modal-row { grid-template-columns: 1fr; }
   .modal-submit { align-self: stretch; text-align: center; }
 }
