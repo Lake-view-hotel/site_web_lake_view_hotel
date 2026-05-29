@@ -17,7 +17,7 @@ export async function POST(req: Request) {
     await resend.emails.send({
       from: "Lake View Hôtel <onboarding@resend.dev>",
       to: "lakeviewampefy@gmail.com",
-      reply_to: email,
+      replyTo: email,
       subject: `Demande de réservation — ${nom} · ${arrivee} → ${depart}`,
       html: `
         <h2>Nouvelle demande de réservation</h2>
