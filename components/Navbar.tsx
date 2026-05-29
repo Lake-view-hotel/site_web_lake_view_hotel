@@ -1,10 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
 import "./Navbar.css";
+import ReservationModal from "./ReservationModal";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -31,7 +33,7 @@ export default function Navbar() {
         <li><a href="#contact">Contacts</a></li>
       </ul>
 
-      <button className="nav-reserve">Réserver</button>
+      <button className="nav-reserve" onClick={() => setModalOpen(true)}>Réserver</button>
 
       <button
         className="nav-hamburger"
@@ -62,9 +64,11 @@ export default function Navbar() {
           <a href="#activites" onClick={() => setOpen(false)}>Activités</a>
           <a href="#restaurant" onClick={() => setOpen(false)}>Restaurant</a>
           <a href="#contact" onClick={() => setOpen(false)}>Contacts</a>
-          <a href="#contact" className="nav-mobile-reserve" onClick={() => setOpen(false)}>Réserver</a>
+          <button className="nav-mobile-reserve" onClick={() => { setOpen(false); setModalOpen(true); }}>Réserver</button>
         </div>
       )}
+
+      {modalOpen && <ReservationModal onClose={() => setModalOpen(false)} />}
     </nav>
   );
 }

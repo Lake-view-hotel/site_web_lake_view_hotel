@@ -1,8 +1,11 @@
 "use client";
 import "./page.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import ReservationModal from "@/components/ReservationModal";
 
 export default function HomePage() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   useEffect(() => {
     const reveals = document.querySelectorAll<HTMLElement>(".reveal");
     const obs = new IntersectionObserver(
@@ -333,7 +336,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <button className="btn-reserve reveal reveal-delay-4">Réserver un séjour</button>
+            <button className="btn-reserve reveal reveal-delay-4" onClick={() => setModalOpen(true)}>Réserver un séjour</button>
           </div>
           <div className="contact-map reveal reveal-delay-3">
             <iframe
@@ -346,6 +349,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {modalOpen && <ReservationModal onClose={() => setModalOpen(false)} />}
     </>
   );
 }

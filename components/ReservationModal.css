@@ -1,0 +1,183 @@
+/* ─── OVERLAY ─── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(10, 14, 10, 0.82);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: overlayIn 0.25s ease;
+}
+
+@keyframes overlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ─── PANEL ─── */
+.modal-panel {
+  background: var(--dark-mid);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  width: 100%;
+  max-width: 520px;
+  padding: 48px;
+  position: relative;
+  animation: panelIn 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes panelIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── CLOSE ─── */
+.modal-close {
+  position: absolute;
+  top: 20px; right: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: color 0.2s;
+  padding: 4px;
+  line-height: 0;
+}
+.modal-close:hover { color: var(--cream); }
+
+/* ─── HEADER ─── */
+.modal-label {
+  font-size: 10px; font-weight: 400;
+  letter-spacing: 0.38em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 12px;
+}
+
+.modal-title {
+  font-family: var(--font-serif), 'Cormorant Garamond', serif;
+  font-size: 32px; font-weight: 300;
+  color: var(--cream); line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.modal-title em { font-style: italic; }
+
+.modal-sep {
+  width: 36px; height: 1px;
+  background: var(--gold); opacity: 0.5;
+  margin: 20px 0 28px;
+}
+
+/* ─── FORM ─── */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.modal-field label {
+  font-size: 10px; font-weight: 400;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.modal-field input,
+.modal-field textarea {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 12px 14px;
+  font-family: var(--font-body), 'DM Sans', sans-serif;
+  font-size: 13px; font-weight: 300;
+  color: var(--cream);
+  transition: border-color 0.2s;
+  outline: none;
+  width: 100%;
+}
+
+.modal-field input::placeholder,
+.modal-field textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.modal-field input:focus,
+.modal-field textarea:focus {
+  border-color: rgba(176, 141, 90, 0.5);
+}
+
+.modal-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ─── SUBMIT ─── */
+.modal-submit {
+  margin-top: 8px;
+  background: transparent;
+  border: 1px solid rgba(176, 141, 90, 0.6);
+  color: var(--cream);
+  padding: 14px 32px;
+  border-radius: 2px;
+  font-family: var(--font-body), 'DM Sans', sans-serif;
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s;
+  align-self: flex-end;
+}
+
+.modal-submit:hover:not(:disabled) {
+  background: rgba(176, 141, 90, 0.15);
+  border-color: var(--gold-light);
+}
+
+.modal-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ─── FEEDBACK ─── */
+.modal-success {
+  text-align: center;
+  padding: 24px 0 8px;
+}
+
+.modal-success-icon {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(176, 141, 90, 0.4);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.modal-success p {
+  font-size: 13px; font-weight: 300;
+  color: var(--text-body); line-height: 1.7;
+}
+
+.modal-error {
+  font-size: 12px;
+  color: #e07070;
+  margin-top: 4px;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 600px) {
+  .modal-panel { padding: 32px 24px; }
+  .modal-row { grid-template-columns: 1fr; }
+  .modal-submit { align-self: stretch; text-align: center; }
+}
