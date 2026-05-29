@@ -2,40 +2,32 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Bebas_Neue, Instrument_Sans, JetBrains_Mono } from "next/font/google";
+import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 
-const bebasNeue = Bebas_Neue({
+const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-display",
+  weight: ["300", "400", "500"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
   display: "swap",
 });
 
-const instrumentSans = Instrument_Sans({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["200", "300", "400", "500"],
   variable: "--font-body",
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-mono",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  title: "Bitumad – Des routes solides à Madagascar",
+  title: "Lake View Hôtel – Ampefy, Madagascar",
   description:
-    "Bitumad est votre partenaire de confiance pour la fourniture de bitume de pénétration 60/70 à Madagascar. Qualité conforme aux normes internationales ASTM.",
+    "Un havre de paix niché sur les rives du lac d'Ampefy. Découvrez nos chambres, activités et restaurant panoramique au cœur des hauts plateaux malgaches.",
   keywords:
-    "bitume Madagascar, bitume 60/70, routes Madagascar, BTP Madagascar, fourniture bitume, ASTM",
-  authors: [{ name: "Bitumad" }],
-  creator: "Bitumad",
-  metadataBase: new URL("https://www.bitumad.mg"),
+    "Lake View Hotel, Ampefy, Madagascar, hôtel, lac, tourisme Madagascar, hauts plateaux",
+  authors: [{ name: "Lake View Hôtel" }],
+  metadataBase: new URL("https://lake-view-hotel.mg"),
   alternates: { canonical: "/" },
-  icons: { icon: "https://res.cloudinary.com/uuiwf5lx/image/upload/q_auto/f_auto/v1779650741/bitumad_logo_cercle_remove_v2_zcpvnc.webp" },
 };
 
 export default function RootLayout({
@@ -46,7 +38,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${bebasNeue.variable} ${instrumentSans.variable} ${jetbrainsMono.variable}`}
+      className={`${cormorantGaramond.variable} ${dmSans.variable}`}
     >
       <body>
         <Navbar />
