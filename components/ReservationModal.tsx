@@ -6,11 +6,20 @@ interface Props {
   onClose: () => void;
 }
 
+const CHAMBRES = [
+  "Chambre Standard",
+  "Chambre Triple",
+  "Chambre Familiale",
+];
+
 export default function ReservationModal({ onClose }: Props) {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
-  const [form, setForm] = useState({ nom: "", email: "", tel: "", message: "" });
+  const [form, setForm] = useState({
+    nom: "", email: "", tel: "",
+    chambre: "", personnes: "", arrivee: "", depart: "",
+    message: "",
+  });
 
-  // Fermer avec Escape
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
     document.addEventListener("keydown", onKey);
@@ -21,8 +30,9 @@ export default function ReservationModal({ onClose }: Props) {
     };
   }, [onClose]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,9 +59,13 @@ export default function ReservationModal({ onClose }: Props) {
           </svg>
         </button>
 
-        <div className="modal-label">Réservation</div>
+        <div className="modal-label">Demande de réservation</div>
         <h2 className="modal-title">Planifiez votre<br /><em>séjour</em></h2>
         <div className="modal-sep" />
+        <p className="modal-notice">
+          Cette demande sera traitée par notre équipe et confirmée sous réserve des disponibilités.
+          Nous vous contacterons dans les plus brefs délais.
+        </p>
 
         {status === "success" ? (
           <div className="modal-success">
@@ -61,15 +75,18 @@ export default function ReservationModal({ onClose }: Props) {
               </svg>
             </div>
             <h3 className="modal-title" style={{ fontSize: "22px", marginBottom: "12px" }}>
-              Message envoyé
+              Demande envoyée
             </h3>
-            <p>Notre équipe vous contactera dans les plus brefs délais pour confirmer votre séjour.</p>
+            <p>
+              Votre demande a bien été reçue. Notre équipe reviendra vers vous rapidement
+              pour confirmer la disponibilité et finaliser votre séjour.
+            </p>
           </div>
         ) : (
           <form className="modal-form" onSubmit={handleSubmit}>
             <div className="modal-row">
               <div className="modal-field">
-                <label htmlFor="nom">Nom</label>
+                <label htmlFor="nom">Nom complet</label>
                 <input
                   id="nom" name="nom" type="text"
                   placeholder="Jean Dupont"
@@ -86,6 +103,7 @@ export default function ReservationModal({ onClose }: Props) {
                 />
               </div>
             </div>
+
             <div className="modal-field">
               <label htmlFor="email">Email</label>
               <input
@@ -95,13 +113,55 @@ export default function ReservationModal({ onClose }: Props) {
                 required
               />
             </div>
+
+            <div className="modal-row">
+              <div className="modal-field">
+                <label htmlFor="chambre">Type de chambre</label>
+                <select id="chambre" name="chambre" value={form.chambre} onChange={handleChange} required>
+                  <option value="" disabled>Sélectionner…</option>
+                  {CHAMBRES.map((c) => (
+                    <option key={c} value={c}>{c}</option>
+                  ))}
+                </select>
+              </div>
+              <div className="modal-field">
+                <label htmlFor="personnes">Nombre de personnes</label>
+                <select id="personnes" name="personnes" value={form.personnes} onChange={handleChange} required>
+                  <option value="" disabled>Sélectionner…</option>
+                  {[1,2,3,4,5,6].map((n) => (
+                    <option key={n} value={n}>{n} personne{n > 1 ? "s" : ""}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            <div className="modal-row">
+              <div className="modal-field">
+                <label htmlFor="arrivee">Date d&apos;arrivée</label>
+                <input
+                  id="arrivee" name="arrivee" type="date"
+                  value={form.arrivee} onChange={handleChange}
+                  min={new Date().toISOString().split("T")[0]}
+                  required
+                />
+              </div>
+              <div className="modal-field">
+                <label htmlFor="depart">Date de départ</label>
+                <input
+                  id="depart" name="depart" type="date"
+                  value={form.depart} onChange={handleChange}
+                  min={form.arrivee || new Date().toISOString().split("T")[0]}
+                  required
+                />
+              </div>
+            </div>
+
             <div className="modal-field">
-              <label htmlFor="message">Votre demande</label>
+              <label htmlFor="message">Message <span className="modal-optional">(optionnel)</span></label>
               <textarea
                 id="message" name="message"
-                placeholder="Dates souhaitées, nombre de personnes, type de chambre…"
+                placeholder="Demandes particulières, informations complémentaires…"
                 value={form.message} onChange={handleChange}
-                required
               />
             </div>
 

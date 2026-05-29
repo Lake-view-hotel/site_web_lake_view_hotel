@@ -7,9 +7,9 @@ export async function POST(req: Request) {
   }
 
   const resend = new Resend(process.env.RESEND_API_KEY);
-  const { nom, email, tel, message } = await req.json();
+  const { nom, email, tel, chambre, personnes, arrivee, depart, message } = await req.json();
 
-  if (!nom || !email || !message) {
+  if (!nom || !email || !chambre || !personnes || !arrivee || !depart) {
     return NextResponse.json({ error: "Champs manquants" }, { status: 400 });
   }
 
@@ -18,13 +18,18 @@ export async function POST(req: Request) {
       from: "Lake View Hôtel <onboarding@resend.dev>",
       to: "lakeviewampefy@gmail.com",
       reply_to: email,
-      subject: `Demande de séjour — ${nom}`,
+      subject: `Demande de réservation — ${nom} · ${arrivee} → ${depart}`,
       html: `
-        <h2>Nouvelle demande de séjour</h2>
+        <h2>Nouvelle demande de réservation</h2>
         <p><strong>Nom :</strong> ${nom}</p>
         <p><strong>Email :</strong> ${email}</p>
         <p><strong>Téléphone :</strong> ${tel || "—"}</p>
-        <p><strong>Message :</strong><br/>${message}</p>
+        <hr/>
+        <p><strong>Type de chambre :</strong> ${chambre}</p>
+        <p><strong>Nombre de personnes :</strong> ${personnes}</p>
+        <p><strong>Arrivée :</strong> ${arrivee}</p>
+        <p><strong>Départ :</strong> ${depart}</p>
+        ${message ? `<hr/><p><strong>Message :</strong><br/>${message}</p>` : ""}
       `,
     });
     return NextResponse.json({ success: true });
