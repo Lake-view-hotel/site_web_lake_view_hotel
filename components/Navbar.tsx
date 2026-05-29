@@ -1,12 +1,19 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Navbar.css";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <nav className="nav">
+    <nav className={`nav${scrolled ? " nav--scrolled" : ""}`}>
       <a className="nav-logo" href="/">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
