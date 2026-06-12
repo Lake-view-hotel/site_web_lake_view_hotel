@@ -6,15 +6,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px 48px;
-  background: linear-gradient(to bottom, rgba(10, 14, 10, 0.88) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(10, 14, 10, 0.52) 0%, transparent 100%);
   transition: background 0.35s ease, padding 0.35s ease, box-shadow 0.35s ease;
 }
 
 .nav--scrolled {
-  background: rgba(13, 18, 13, 0.97);
+  background: rgba(243, 236, 224, 0.97);
   padding-top: 14px;
   padding-bottom: 14px;
-  box-shadow: 0 1px 0 rgba(176, 141, 90, 0.12);
+  box-shadow: 0 1px 0 rgba(154, 120, 64, 0.15);
 }
 
 .nav-logo {
@@ -38,25 +38,38 @@
 .nav-links a {
   font-size: 12px; font-weight: 400;
   letter-spacing: 0.1em; text-transform: uppercase;
-  color: rgba(245, 240, 232, 0.7); text-decoration: none;
+  color: rgba(255, 255, 255, 0.82); text-decoration: none;
   transition: color 0.2s;
 }
 
-.nav-links a:hover { color: var(--cream); }
+.nav-links a:hover { color: #fff; }
+
+.nav--scrolled .nav-links a { color: rgba(42, 29, 16, 0.65); }
+.nav--scrolled .nav-links a:hover { color: #2a1d10; }
 
 .nav-reserve {
   background: transparent;
-  color: var(--cream);
-  border: 1px solid rgba(176, 141, 90, 0.6);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.55);
   padding: 10px 26px; border-radius: 2px;
   font-family: var(--font-body), 'DM Sans', sans-serif;
   font-size: 11px; font-weight: 500;
   letter-spacing: 0.14em; text-transform: uppercase;
-  cursor: pointer; transition: background 0.25s, border-color 0.25s;
+  cursor: pointer; transition: background 0.25s, border-color 0.25s, color 0.25s;
 }
 
 .nav-reserve:hover {
-  background: rgba(176, 141, 90, 0.15);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+.nav--scrolled .nav-reserve {
+  color: #2a1d10;
+  border-color: rgba(154, 120, 64, 0.55);
+}
+
+.nav--scrolled .nav-reserve:hover {
+  background: rgba(154, 120, 64, 0.1);
   border-color: var(--gold-light);
 }
 
@@ -66,12 +79,16 @@
   border: none;
   cursor: pointer;
   padding: 4px;
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.25s;
 }
+
+.nav--scrolled .nav-hamburger { color: #2a1d10; }
 
 .nav-mobile {
   position: absolute;
   top: 100%; left: 0; right: 0;
-  background: rgba(17, 22, 16, 0.97);
+  background: rgba(243, 236, 224, 0.98);
   border-top: 1px solid var(--border);
   padding: 24px 48px;
   display: flex;
@@ -82,12 +99,12 @@
 .nav-mobile a {
   font-size: 13px; font-weight: 400;
   letter-spacing: 0.1em; text-transform: uppercase;
-  color: rgba(245, 240, 232, 0.7);
+  color: rgba(42, 29, 16, 0.7);
   text-decoration: none;
   transition: color 0.2s;
 }
 
-.nav-mobile a:hover { color: var(--cream); }
+.nav-mobile a:hover { color: #2a1d10; }
 
 .nav-mobile-reserve {
   margin-top: 8px;

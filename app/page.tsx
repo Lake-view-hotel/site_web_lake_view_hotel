@@ -183,7 +183,7 @@ export default function HomePage() {
           <div>
             <div className="section-label reveal">Nos activités</div>
             <h2 className="section-title reveal reveal-delay-1">
-              Explorez<br /><em>Ampefy</em>
+              Explorez <em>Ampefy</em>
             </h2>
             <div className="sep-gold" />
             <p className="section-body reveal reveal-delay-2">

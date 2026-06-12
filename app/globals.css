@@ -5,15 +5,15 @@
 }
 
 :root {
-  --cream: #f5f0e8;
-  --dark: #111610;
-  --dark-mid: #171e15;
-  --dark-card: #1c2419;
-  --gold: #b08d5a;
-  --gold-light: #c9a96e;
-  --border: rgba(176, 141, 90, 0.15);
-  --text-muted: rgba(245, 240, 232, 0.45);
-  --text-body: rgba(245, 240, 232, 0.62);
+  --cream: #2a1d10;
+  --dark: #f4ede1;
+  --dark-mid: #ece5d6;
+  --dark-card: #e2d9c8;
+  --gold: #9a7840;
+  --gold-light: #b08d5a;
+  --border: rgba(154, 120, 64, 0.2);
+  --text-muted: rgba(42, 29, 16, 0.42);
+  --text-body: rgba(42, 29, 16, 0.60);
 }
 
 html { scroll-behavior: smooth; }

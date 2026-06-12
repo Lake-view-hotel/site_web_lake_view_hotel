@@ -271,7 +271,7 @@
 
 .contact-inner {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: 80px; align-items: start;
+  gap: 80px; align-items: center;
 }
 
 .contact-info { display: flex; flex-direction: column; gap: 32px; margin-top: 40px; }
