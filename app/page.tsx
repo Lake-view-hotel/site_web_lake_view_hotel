@@ -128,15 +128,15 @@ export default function HomePage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://res.cloudinary.com/dnz6gt3yr/image/upload/v1780060500/lake-view-hotel_chambre_1_i47bvz.jpg"
-              alt="Chambre Standard"
+              alt="Chambre Double"
             />
             <div className="chambre-info">
               <div className="chambre-type">Chambre</div>
-              <div className="chambre-name">Standard</div>
+              <div className="chambre-name">Double</div>
               <div className="chambre-features">
-                <span className="chambre-feat">Vue jardin ou lac</span>
-                <span className="chambre-feat">Lit double queen</span>
-                <span className="chambre-feat">Climatisation</span>
+                <span className="chambre-feat">Lit queen size</span>
+                <span className="chambre-feat">Salle de bain</span>
+                <span className="chambre-feat">Terrasse avec vue sur le lac</span>
               </div>
             </div>
           </div>
@@ -148,11 +148,11 @@ export default function HomePage() {
             />
             <div className="chambre-info">
               <div className="chambre-type">Chambre</div>
-              <div className="chambre-name">Supérieure</div>
+              <div className="chambre-name">Triple</div>
               <div className="chambre-features">
-                <span className="chambre-feat">Vue panoramique lac</span>
+                <span className="chambre-feat">Lit queen size + canapé</span>
+                <span className="chambre-feat">Bain ou douche italienne</span>
                 <span className="chambre-feat">Terrasse privée</span>
-                <span className="chambre-feat">Baignoire &amp; douche</span>
               </div>
             </div>
           </div>
@@ -160,15 +160,15 @@ export default function HomePage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://res.cloudinary.com/dnz6gt3yr/image/upload/v1780060500/lake-view-hotel_chambre_familiale_1_wv1vld.jpg"
-              alt="Chambre Familiale"
+              alt="Suite Familiale"
             />
             <div className="chambre-info">
-              <div className="chambre-type">Villa</div>
-              <div className="chambre-name">Moderne</div>
+              <div className="chambre-type">Suite</div>
+              <div className="chambre-name">Familiale</div>
               <div className="chambre-features">
-                <span className="chambre-feat">Villa indépendante</span>
-                <span className="chambre-feat">Séjour &amp; cuisine</span>
-                <span className="chambre-feat">Accès piscine privée</span>
+                <span className="chambre-feat">Duplex avec terrasse</span>
+                <span className="chambre-feat">Rez-de-chaussée : grand lit et salle de bain</span>
+                <span className="chambre-feat">Étage : 2 lits et canapé-lit</span>
               </div>
             </div>
           </div>
@@ -183,7 +183,7 @@ export default function HomePage() {
           <div>
             <div className="section-label reveal">Nos activités</div>
             <h2 className="section-title reveal reveal-delay-1">
-              Explorez <em>Ampefy</em>
+              Explorez<br /><em>Ampefy</em>
             </h2>
             <div className="sep-gold" />
             <p className="section-body reveal reveal-delay-2">
@@ -244,8 +244,8 @@ export default function HomePage() {
             />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://res.cloudinary.com/dnz6gt3yr/image/upload/v1780060501/Lake-view-hotel_pizza_lvmmdp.jpg"
-              alt="Cuisine Lake View Hôtel"
+              src="https://res.cloudinary.com/dnz6gt3yr/image/upload/v1781612600/lake_view_hotel_cordon_bleu_avec_frites_cs0fkx.jpg"
+              alt="Cordon bleu Lake View Hôtel"
             />
           </div>
           <div className="restaurant-content">
@@ -261,26 +261,34 @@ export default function HomePage() {
             <div className="restaurant-menu reveal reveal-delay-3">
               <div className="menu-item">
                 <div>
-                  <div className="menu-name">Tilapia du lac grillé</div>
-                  <div className="menu-desc">Légumes du marché, sauce coco-citronnelle</div>
+                  <div className="menu-name">Cordon bleu</div>
+                  <div className="menu-desc">Pané maison, sauce crémeuse, frites</div>
                 </div>
                 <div className="menu-price">28 000 Ar</div>
               </div>
               <div className="menu-item">
                 <div>
-                  <div className="menu-name">Zébu braisé lentement</div>
-                  <div className="menu-desc">Riz rouge de Marovoay, jus de viande réduit</div>
+                  <div className="menu-name">Soupe garnie</div>
+                  <div className="menu-desc">Œuf, poulet grillé, boulettes de zébu</div>
                 </div>
-                <div className="menu-price">34 000 Ar</div>
+                <div className="menu-price">22 000 Ar</div>
               </div>
               <div className="menu-item">
                 <div>
-                  <div className="menu-name">Plateau de fruits tropicaux</div>
-                  <div className="menu-desc">Mangue, litchi, banane · Sorbet maison</div>
+                  <div className="menu-name">Tilapia grillé</div>
+                  <div className="menu-desc">Poisson du lac, pommes de terre sautées</div>
                 </div>
-                <div className="menu-price">14 000 Ar</div>
+                <div className="menu-price">28 000 Ar</div>
+              </div>
+              <div className="menu-item">
+                <div>
+                  <div className="menu-name">Mousseline d&apos;avocat</div>
+                  <div className="menu-desc">Avocat frais, croûtons, pain grillé</div>
+                </div>
+                <div className="menu-price">18 000 Ar</div>
               </div>
             </div>
+            <a href="#contact" className="btn-carte reveal reveal-delay-4">Voir la carte</a>
           </div>
         </div>
       </section>

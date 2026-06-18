@@ -7,9 +7,9 @@ interface Props {
 }
 
 const CHAMBRES = [
-  "Chambre Standard",
+  "Chambre Double",
   "Chambre Triple",
-  "Chambre Familiale",
+  "Suite Familiale",
 ];
 
 export default function ReservationModal({ onClose }: Props) {

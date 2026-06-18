@@ -4,17 +4,12 @@ export default function Footer() {
       <div className="footer-top">
         <div className="footer-brand">
           <div className="footer-logo-wrap">
-            <div className="logo-mark">
-              <svg viewBox="0 0 26 26" fill="none">
-                <ellipse cx="13" cy="16" rx="9" ry="5.5" stroke="#b08d5a" strokeWidth="1" fill="none" />
-                <path d="M4 16 Q13 7 22 16" stroke="#b08d5a" strokeWidth="1" fill="none" />
-                <line x1="13" y1="4" x2="13" y2="9.5" stroke="#b08d5a" strokeWidth="1" />
-                <circle cx="13" cy="3.5" r="1.5" fill="#b08d5a" />
-              </svg>
-            </div>
-            <div className="logo-text">
-              Lake View <span className="logo-sub">Hôtel · Ampefy</span>
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://res.cloudinary.com/dnz6gt3yr/image/upload/v1780060501/logo_lake_view_hotel_V2_jo0ygy.webp"
+              alt="Lake View Hôtel Ampefy"
+              className="footer-logo-img"
+            />
           </div>
           <p className="footer-tagline">
             Un havre de paix niché sur les rives du lac d&apos;Ampefy, au cœur des hauts plateaux malgaches.
