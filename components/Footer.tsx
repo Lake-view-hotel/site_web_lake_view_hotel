@@ -50,6 +50,9 @@ export default function Footer() {
       <div className="footer-bottom">
         <span className="footer-copy">© 2025 Lake View Hôtel · Ampefy, Madagascar</span>
         <span className="footer-copy">Tous droits réservés</span>
+        <span className="footer-copy">
+          Réalisé par <a href="https://oxmad-digital.mg" target="_blank" rel="nofollow noopener noreferrer" className="footer-oxmad">Oxmad Digital</a>
+        </span>
       </div>
     </footer>
   );

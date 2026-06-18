@@ -117,6 +117,13 @@ footer {
   letter-spacing: 0.04em;
 }
 
+.footer-oxmad {
+  color: var(--gold);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.footer-oxmad:hover { opacity: 0.75; }
+
 @media (max-width: 768px) {
   footer { padding: 48px 24px 32px; }
 
