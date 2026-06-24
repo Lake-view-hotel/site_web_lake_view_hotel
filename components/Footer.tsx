@@ -50,7 +50,7 @@ export default function Footer() {
         <span className="footer-copy">
           Réalisé par <a href="https://oxmad-digital.mg" target="_blank" rel="nofollow noopener noreferrer" className="footer-oxmad">Oxmad Digital</a>
         </span>
-        <span className="footer-copy"><a href="#">Mentions légales</a></span>
+        <span className="footer-copy"><a href="/mentions-legales">Mentions légales</a></span>
       </div>
     </footer>
   );
