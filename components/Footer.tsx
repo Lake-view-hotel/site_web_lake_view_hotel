@@ -28,15 +28,6 @@ export default function Footer() {
         </div>
 
         <div>
-          <div className="footer-col-title">Informations</div>
-          <div className="footer-nav-links">
-            <a href="#">Tarifs &amp; disponibilités</a>
-            <a href="#">Politique d&apos;annulation</a>
-            <a href="#">Mentions légales</a>
-          </div>
-        </div>
-
-        <div>
           <div className="footer-col-title">Suivez-nous</div>
           <div className="footer-nav-links">
             <a href="#">Facebook</a>
@@ -53,6 +44,7 @@ export default function Footer() {
         <span className="footer-copy">
           Réalisé par <a href="https://oxmad-digital.mg" target="_blank" rel="nofollow noopener noreferrer" className="footer-oxmad">Oxmad Digital</a>
         </span>
+        <span className="footer-copy"><a href="#">Mentions légales</a></span>
       </div>
     </footer>
   );

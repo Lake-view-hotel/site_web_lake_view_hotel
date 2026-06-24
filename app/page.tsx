@@ -328,7 +328,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <div className="contact-label">Téléphone / Whatsapp</div>
-                  <div className="contact-value">+261 34 00 000 00</div>
+                  <div className="contact-value">+261 38 10 786 21</div>
                 </div>
               </div>
               <div className="contact-item">
@@ -340,7 +340,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <div className="contact-label">Adresse</div>
-                  <div className="contact-value">Ampefy, Région Itasy<br />Madagascar</div>
+                  <div className="contact-value">Ampefy, Madagascar</div>
                 </div>
               </div>
             </div>

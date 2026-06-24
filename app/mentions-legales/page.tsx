@@ -3,7 +3,7 @@ import "./mentions-legales.css";
 export default function MentionsLegalesPage() {
   return (
     <section className="mentions-section">
-      <div className="mentions-wrapper"> {/* conteneur blanc centré */}
+      <div className="mentions-wrapper">
         <div className="mentions-inner">
           <h1>Mentions Légales</h1>
 
@@ -12,89 +12,98 @@ export default function MentionsLegalesPage() {
               <h2>1. Éditeur du site</h2>
             </div>
             <div className="mentions-content-wrapper">
-              <p><strong>Nom de l'entreprise :</strong> Thadéus Externalia</p>
-              <p><strong>Forme juridique :</strong> Entreprise Individuelle</p>
-              <p><strong>Siège social :</strong> Logement 149, Cité Livaosoa Ambatara
-              Antananarivo 101, Madagascar</p>
-
-              <p><strong>Téléphone :</strong> +261 32 17 575 66</p>
-              <p><strong>Email :</strong> thadeus@jurisexternalia.com</p>
-
+              <p><strong>Raison sociale :</strong> [NOM LÉGAL DE L&apos;ÉTABLISSEMENT]</p>
+              <p><strong>Forme juridique :</strong> [FORME JURIDIQUE — ex : SARL, Entreprise Individuelle…]</p>
+              <p><strong>Numéro d&apos;immatriculation :</strong> [NUMÉRO NIF / STAT / RCS]</p>
+              <p><strong>Siège social :</strong> [ADRESSE COMPLÈTE], Ampefy, Madagascar</p>
+              <p><strong>Téléphone :</strong> +261 38 10 786 21</p>
+              <p><strong>Email :</strong> [ADRESSE EMAIL DE CONTACT]</p>
             </div>
           </div>
 
           <div className="mentions-block">
             <div className="mentions-title-wrapper">
-              <h2>2. Hébergement</h2>
+              <h2>2. Responsable de la publication</h2>
             </div>
             <div className="mentions-content-wrapper">
-             <p>Le site est conçu et hébergé par : <strong>Vercel Inc.</strong></p>
-<p>Adresse : 340 Pine Street, Suite 701, San Francisco, CA 94104, États-Unis</p>
-<p>Site web : <a href="https://www.vercel.com" target="_blank">www.vercel.com</a></p>
+              <p><strong>Nom :</strong> [PRÉNOM NOM DU RESPONSABLE]</p>
+              <p><strong>Qualité :</strong> [FONCTION — ex : Gérant, Directeur…]</p>
+              <p><strong>Contact :</strong> [ADRESSE EMAIL DU RESPONSABLE]</p>
             </div>
           </div>
 
           <div className="mentions-block">
             <div className="mentions-title-wrapper">
-              <h2>3. Propriété intellectuelle</h2>
+              <h2>3. Conception et développement</h2>
             </div>
             <div className="mentions-content-wrapper">
-              <p>L'ensemble des contenus présents sur ce site (textes, images originales, photographies, logos, éléments graphiques, etc.) est la propriété exclusive de Thadéus Externalia, sauf mention contraire.</p>
-              <p><strong>Exceptions :</strong></p>
-              <ul>
-                <li>Certaines images ou ressources graphiques proviennent de Freepik et sont utilisées conformément à leur licence d'utilisation.</li>
-                <li>Certaines images ont été générées par intelligence artificielle.</li>
-              </ul>
-              <p>Toute reproduction, représentation ou diffusion, même partielle, des contenus protégés est interdite sans autorisation préalable.</p>
-            </div>
-          </div>
-
-          <div className="mentions-block">
-            <div className="mentions-title-wrapper">
-              <h2>4. Conditions générales d'utilisation</h2>
-            </div>
-            <div className="mentions-content-wrapper">
-              <p>L'accès et l'utilisation du site impliquent l'acceptation pleine et entière des présentes CGU.</p>
-              <p>L'utilisateur s'engage à :</p>
-              <ul>
-                <li>Utiliser le site uniquement à des fins légales et personnelles.</li>
-                <li>Ne pas tenter d'accéder illégalement au serveur, ni perturber son fonctionnement.</li>
-                <li>Ne pas collecter ni utiliser les données personnelles d'autres utilisateurs.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mentions-block">
-            <div className="mentions-title-wrapper">
-              <h2>5. Politique de confidentialité</h2>
-            </div>
-            <div className="mentions-content-wrapper">
-              <p>Les données personnelles collectées (formulaires, email, téléphone, cookies) sont utilisées uniquement pour traiter les demandes clients et répondre aux messages.</p>
-              <p>Elles ne sont jamais vendues ni partagées à des tiers sans consentement.</p>
-              <p>Pour exercer vos droits : <a href="mailto:thadeus@jurisexternalia.com">thadeus@jurisexternalia.com</a></p>
-            </div>
-          </div>
-
-          <div className="mentions-block">
-            <div className="mentions-title-wrapper">
-              <h2>6. Cookies</h2>
-            </div>
-            <div className="mentions-content-wrapper">
-              <p>Le site peut utiliser des cookies pour améliorer la navigation, mesurer l'audience ou enregistrer les préférences utilisateur. L'utilisateur peut à tout moment accepter, refuser ou supprimer les cookies via les paramètres de son navigateur.</p>
-            </div>
-          </div>
-
-          <div className="mentions-block">
-            <div className="mentions-title-wrapper">
-              <h2>7. Responsabilité</h2>
-            </div>
-            <div className="mentions-content-wrapper">
-              <p>L'éditeur met tout en œuvre pour assurer l'exactitude des informations publiées. Cependant, il ne saurait être tenu responsable des erreurs, omissions ou dysfonctionnements techniques.</p>
               <p>Ce site a été conçu et développé par <strong>Oxmad Digital</strong>.</p>
+              <p>Site web : <a href="https://oxmad-digital.mg" target="_blank" rel="nofollow noopener noreferrer">oxmad-digital.mg</a></p>
             </div>
           </div>
 
-          <p className="mentions-date">Dernière mise à jour : avril 2026</p>
+          <div className="mentions-block">
+            <div className="mentions-title-wrapper">
+              <h2>4. Hébergement</h2>
+            </div>
+            <div className="mentions-content-wrapper">
+              <p>Le site est hébergé par : <strong>Vercel Inc.</strong></p>
+              <p>Adresse : 340 Pine Street, Suite 701, San Francisco, CA 94104, États-Unis</p>
+              <p>Site web : <a href="https://www.vercel.com" target="_blank" rel="noopener noreferrer">www.vercel.com</a></p>
+            </div>
+          </div>
+
+          <div className="mentions-block">
+            <div className="mentions-title-wrapper">
+              <h2>5. Propriété intellectuelle</h2>
+            </div>
+            <div className="mentions-content-wrapper">
+              <p>L&apos;ensemble des contenus présents sur ce site (textes, photographies, logos, éléments graphiques, etc.) est la propriété exclusive de [NOM LÉGAL DE L&apos;ÉTABLISSEMENT], sauf mention contraire.</p>
+              <p>Toute reproduction, représentation ou diffusion, même partielle, sans autorisation écrite préalable est strictement interdite.</p>
+            </div>
+          </div>
+
+          <div className="mentions-block">
+            <div className="mentions-title-wrapper">
+              <h2>6. Protection des données personnelles</h2>
+            </div>
+            <div className="mentions-content-wrapper">
+              <p>Les données personnelles collectées via les formulaires du site (nom, téléphone, email, dates de séjour) sont utilisées exclusivement pour traiter les demandes de réservation et répondre aux messages des visiteurs.</p>
+              <p>Elles ne sont jamais revendues ni transmises à des tiers à des fins commerciales.</p>
+              <p>Conformément à la réglementation en vigueur, vous disposez d&apos;un droit d&apos;accès, de rectification et de suppression de vos données. Pour exercer ce droit, contactez-nous à : <strong>[ADRESSE EMAIL DE CONTACT]</strong></p>
+            </div>
+          </div>
+
+          <div className="mentions-block">
+            <div className="mentions-title-wrapper">
+              <h2>7. Cookies</h2>
+            </div>
+            <div className="mentions-content-wrapper">
+              <p>Ce site peut utiliser des cookies à des fins d&apos;analyse d&apos;audience et d&apos;amélioration de la navigation. Aucun cookie publicitaire ou de traçage tiers n&apos;est utilisé.</p>
+              <p>Vous pouvez à tout moment désactiver les cookies dans les paramètres de votre navigateur.</p>
+            </div>
+          </div>
+
+          <div className="mentions-block">
+            <div className="mentions-title-wrapper">
+              <h2>8. Responsabilité</h2>
+            </div>
+            <div className="mentions-content-wrapper">
+              <p>L&apos;éditeur s&apos;efforce d&apos;assurer l&apos;exactitude et la mise à jour des informations diffusées sur ce site. Cependant, il ne saurait être tenu responsable des erreurs, omissions ou indisponibilités du service.</p>
+              <p>Les tarifs et disponibilités affichés sont donnés à titre indicatif et peuvent être modifiés sans préavis.</p>
+            </div>
+          </div>
+
+          <div className="mentions-block">
+            <div className="mentions-title-wrapper">
+              <h2>9. Droit applicable</h2>
+            </div>
+            <div className="mentions-content-wrapper">
+              <p>Les présentes mentions légales sont régies par le droit malgache. Tout litige relatif à l&apos;utilisation de ce site sera soumis à la compétence exclusive des tribunaux de [VILLE — ex : Antananarivo], Madagascar.</p>
+            </div>
+          </div>
+
+          <p className="mentions-date">Dernière mise à jour : juin 2026</p>
         </div>
       </div>
     </section>
