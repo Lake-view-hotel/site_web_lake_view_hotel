@@ -288,7 +288,7 @@ export default function HomePage() {
                 <div className="menu-price">18 000 Ar</div>
               </div>
             </div>
-            <a href="#contact" className="btn-carte reveal reveal-delay-4">Voir la carte</a>
+            <a href="/Lake%20View%20H%C3%B4tel%20%E2%80%94%20Cartes%20Menu-1.pdf" target="_blank" rel="noopener noreferrer" className="btn-carte reveal reveal-delay-4">Voir la carte</a>
           </div>
         </div>
       </section>

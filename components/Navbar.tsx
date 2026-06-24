@@ -15,7 +15,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`nav${scrolled ? " nav--scrolled" : ""}`}>
+    <nav className={`nav${scrolled || open ? " nav--scrolled" : ""}`}>
       <a className="nav-logo" href="/">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -41,7 +41,7 @@ export default function Navbar() {
         aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
         aria-expanded={open}
       >
-        <svg viewBox="0 0 22 22" fill="none" stroke="var(--cream)" strokeWidth="1.5" width="22" height="22">
+        <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" width="22" height="22">
           {open ? (
             <>
               <line x1="4" y1="4" x2="18" y2="18" />

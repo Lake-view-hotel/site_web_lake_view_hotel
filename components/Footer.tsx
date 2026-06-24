@@ -11,9 +11,6 @@ export default function Footer() {
               className="footer-logo-img"
             />
           </div>
-          <p className="footer-tagline">
-            Un havre de paix niché sur les rives du lac d&apos;Ampefy, au cœur des hauts plateaux malgaches.
-          </p>
         </div>
 
         <div>
