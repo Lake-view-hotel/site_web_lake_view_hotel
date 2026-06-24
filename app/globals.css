@@ -138,6 +138,14 @@ footer {
   letter-spacing: 0.04em;
 }
 
+.footer-copy a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-copy a:hover { color: var(--cream); }
+
 .footer-oxmad {
   color: var(--gold);
   text-decoration: none;
