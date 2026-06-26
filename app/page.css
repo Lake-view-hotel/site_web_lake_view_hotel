@@ -202,8 +202,12 @@
   gap: 80px; align-items: center;
 }
 
-.activites-img { border-radius: 2px; overflow: hidden; aspect-ratio: 5/4; }
-.activites-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.activites-carousel { border-radius: 2px; overflow: hidden; aspect-ratio: 5/4; position: relative; }
+.activites-carousel-track { display: flex; width: 100%; height: 100%; transition: transform 0.5s ease; }
+.activites-carousel-track img { min-width: 100%; height: 100%; object-fit: cover; display: block; }
+.activites-carousel-dots { position: absolute; bottom: 14px; left: 0; right: 0; display: flex; justify-content: center; gap: 8px; }
+.carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.45); border: none; cursor: pointer; padding: 0; transition: background 0.25s; }
+.carousel-dot.active { background: var(--gold-light); }
 
 .activite-list { display: flex; flex-direction: column; gap: 0; margin-top: 40px; }
 
@@ -380,7 +384,7 @@
 
   .activites { padding: 64px 24px; }
   .activites-inner { grid-template-columns: 1fr; gap: 48px; }
-  .activites-img { order: -1; }
+  .activites-carousel { order: -1; }
 
   .restaurant-inner { grid-template-columns: 1fr; }
   .restaurant-imgs { grid-template-columns: 1fr; }

@@ -5,6 +5,12 @@ import ReservationModal from "@/components/ReservationModal";
 
 export default function HomePage() {
   const [modalOpen, setModalOpen] = useState(false);
+  const [activitesSlide, setActivitesSlide] = useState(0);
+
+  const activitesImages = [
+    { src: "https://res.cloudinary.com/dnz6gt3yr/image/upload/v1780060500/lake-view-hotel_air-de-jeux_rpwqvp.jpg", alt: "Aire de jeux Lake View Hôtel" },
+    { src: "https://res.cloudinary.com/dnz6gt3yr/image/upload/v1782476540/lake-view-hotel_velos_b1qsx6.webp", alt: "Vélos Lake View Hôtel" },
+  ];
 
   useEffect(() => {
     const reveals = document.querySelectorAll<HTMLElement>(".reveal");
@@ -219,14 +225,35 @@ export default function HomePage() {
                   <div className="activite-desc">Aire de jeux et activités pour toute la famille dans les jardins de l&apos;hôtel.</div>
                 </div>
               </div>
+              <div className="activite-item reveal reveal-delay-5">
+                <span className="activite-num">05</span>
+                <div>
+                  <div className="activite-name">Location de vélos</div>
+                  <div className="activite-desc">70 000 Ar (8h–12h) · 100 000 Ar (13h–17h). Partez explorer les environs du lac à votre rythme.</div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="activites-img reveal reveal-delay-2">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://res.cloudinary.com/dnz6gt3yr/image/upload/v1780060500/lake-view-hotel_air-de-jeux_rpwqvp.jpg"
-              alt="Aire de jeux Lake View Hôtel"
-            />
+          <div className="activites-carousel reveal reveal-delay-2">
+            <div
+              className="activites-carousel-track"
+              style={{ transform: `translateX(-${activitesSlide * 100}%)` }}
+            >
+              {activitesImages.map((img) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img key={img.src} src={img.src} alt={img.alt} />
+              ))}
+            </div>
+            <div className="activites-carousel-dots">
+              {activitesImages.map((_, i) => (
+                <button
+                  key={i}
+                  className={`carousel-dot${activitesSlide === i ? " active" : ""}`}
+                  onClick={() => setActivitesSlide(i)}
+                  aria-label={`Photo ${i + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -244,8 +271,8 @@ export default function HomePage() {
             />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://res.cloudinary.com/dnz6gt3yr/image/upload/v1781612600/lake_view_hotel_cordon_bleu_avec_frites_cs0fkx.jpg"
-              alt="Cordon bleu Lake View Hôtel"
+              src="https://res.cloudinary.com/dnz6gt3yr/image/upload/v1782476531/lake-view-hotel_ananas-de-fruits-frais_y5l7ou.webp"
+              alt="Ananas de fruits frais Lake View Hôtel"
             />
           </div>
           <div className="restaurant-content">
