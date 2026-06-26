@@ -19,7 +19,7 @@ export default function Navbar() {
       <a className="nav-logo" href="/">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://res.cloudinary.com/dnz6gt3yr/image/upload/v1780060501/logo_lake_view_hotel_V2_jo0ygy.webp"
+          src="https://res.cloudinary.com/dnz6gt3yr/image/upload/v1782481211/lake-view-hotel_logo_remove_jyh2ws.webp"
           alt="Lake View Hôtel Ampefy"
           className="logo-img"
         />
