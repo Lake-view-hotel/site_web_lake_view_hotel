@@ -53,7 +53,7 @@ export default function HomePage() {
           <div className="mosaic-cell mosaic-tr">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://res.cloudinary.com/dnz6gt3yr/image/upload/v1780060500/lake-view-hotel_table_ext%C3%A9rieur_gxp3tv.jpg"
+              src="https://res.cloudinary.com/dnz6gt3yr/image/upload/v1782482763/lake-view-hotel_vue_de_l_hotel_en_hateur_ptj2tl.webp"
               alt="Terrasse extérieure"
               loading="eager"
             />
