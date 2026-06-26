@@ -116,8 +116,8 @@ export default function HomePage() {
         <div className="about-img reveal reveal-delay-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://res.cloudinary.com/dnz6gt3yr/image/upload/v1780060500/lake-view-hotel-batiments_chambre_1_gh6xkj.jpg"
-            alt="Hôtel Lake View Ampefy"
+            src="https://res.cloudinary.com/dnz6gt3yr/image/upload/v1782476558/lake-view-hotel_team_tyae1y.webp"
+            alt="Équipe Lake View Hôtel Ampefy"
           />
         </div>
       </section>
