@@ -212,29 +212,22 @@ export default function HomePage() {
                   <div className="activite-desc">Partez à la découverte du lac et de ses îlots volcaniques au coucher du soleil.</div>
                 </div>
               </div>
-              <div className="activite-item reveal reveal-delay-3">
-                <span className="activite-num">02</span>
-                <div>
-                  <div className="activite-name">Randonnée aux chutes</div>
-                  <div className="activite-desc">Accédez aux cascades de la Lily, à quelques kilomètres de l&apos;hôtel.</div>
-                </div>
-              </div>
               <div className="activite-item reveal reveal-delay-4">
-                <span className="activite-num">03</span>
+                <span className="activite-num">02</span>
                 <div>
                   <div className="activite-name">Piscine face au lac</div>
                   <div className="activite-desc">Détendez-vous dans notre piscine à débordement avec vue imprenable.</div>
                 </div>
               </div>
               <div className="activite-item reveal reveal-delay-5">
-                <span className="activite-num">04</span>
+                <span className="activite-num">03</span>
                 <div>
                   <div className="activite-name">Espaces de jeux</div>
                   <div className="activite-desc">Aire de jeux et activités pour toute la famille dans les jardins de l&apos;hôtel.</div>
                 </div>
               </div>
               <div className="activite-item reveal reveal-delay-5">
-                <span className="activite-num">05</span>
+                <span className="activite-num">04</span>
                 <div>
                   <div className="activite-name">Location de vélos</div>
                   <div className="activite-desc">70 000 Ar (8h–12h) · 100 000 Ar (13h–17h). Partez explorer les environs du lac à votre rythme.</div>
