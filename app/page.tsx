@@ -13,6 +13,14 @@ export default function HomePage() {
   ];
 
   useEffect(() => {
+    const timer = setInterval(() => {
+      setActivitesSlide((s) => (s + 1) % activitesImages.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
     const reveals = document.querySelectorAll<HTMLElement>(".reveal");
     const obs = new IntersectionObserver(
       (entries) => {
