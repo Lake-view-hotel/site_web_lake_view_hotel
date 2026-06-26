@@ -4,7 +4,6 @@
    HERO BASE
 ═══════════════════════════════════════ */
 .hero {
-  background-color: #223553;
   padding: 10px;
   display: flex;
   justify-content: center;

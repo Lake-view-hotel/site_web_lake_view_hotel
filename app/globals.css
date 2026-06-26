@@ -5,10 +5,12 @@
 }
 
 :root {
-  --cream: #2a1d10;
-  --dark: #f4ede1;
-  --dark-mid: #ece5d6;
-  --dark-card: #e2d9c8;
+  --brown: #2a1d10;      /* brun foncé — texte principal, titres */
+  --brown-dark: #6e3d18; /* chocolat chaud — cartes chambres, boutons CTA */
+  --brown-deep: #5a3210; /* brun profond — état hover des boutons */
+  --bg: #f4ede1;         /* fond principal (beige le plus clair) */
+  --bg-mid: #ece5d6;     /* fond secondaire (beige moyen) */
+  --bg-card: #e2d9c8;    /* surfaces de cartes (beige le plus foncé) */
   --gold: #9a7840;
   --gold-light: #b08d5a;
   --border: rgba(154, 120, 64, 0.2);
@@ -19,15 +21,15 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--dark);
+  background: var(--bg);
   font-family: var(--font-body), 'DM Sans', sans-serif;
-  color: var(--cream);
+  color: var(--brown);
   -webkit-font-smoothing: antialiased;
 }
 
 /* ─── FOOTER ─── */
 footer {
-  background: var(--dark-mid);
+  background: var(--bg-mid);
   border-top: 1px solid var(--border);
   padding: 40px 48px 32px;
 }
@@ -78,7 +80,7 @@ footer {
   text-transform: uppercase;
 }
 
-.footer-nav-links a:hover { color: var(--cream); }
+.footer-nav-links a:hover { color: var(--brown); }
 
 .footer-social-links {
   display: flex;
@@ -96,7 +98,7 @@ footer {
   text-transform: uppercase;
 }
 
-.footer-social-links a:hover { color: var(--cream); }
+.footer-social-links a:hover { color: var(--brown); }
 
 .footer-social-link {
   display: inline-flex;
@@ -110,7 +112,7 @@ footer {
   font-weight: 300;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #6e3d18;
+  color: var(--brown-dark);
   text-align: center;
   padding: 32px 0 0;
   pointer-events: none;
@@ -144,7 +146,7 @@ footer {
   transition: color 0.2s;
 }
 
-.footer-copy a:hover { color: var(--cream); }
+.footer-copy a:hover { color: var(--brown); }
 
 .footer-oxmad {
   color: var(--gold);

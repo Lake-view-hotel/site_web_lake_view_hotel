@@ -45,7 +45,7 @@
 .nav-links a:hover { color: #fff; }
 
 .nav--scrolled .nav-links a { color: rgba(42, 29, 16, 0.65); }
-.nav--scrolled .nav-links a:hover { color: #2a1d10; }
+.nav--scrolled .nav-links a:hover { color: var(--brown); }
 
 .nav-reserve {
   background: transparent;
@@ -64,7 +64,7 @@
 }
 
 .nav--scrolled .nav-reserve {
-  color: #2a1d10;
+  color: var(--brown);
   border-color: rgba(154, 120, 64, 0.55);
 }
 
@@ -83,7 +83,7 @@
   transition: color 0.25s;
 }
 
-.nav--scrolled .nav-hamburger { color: #2a1d10; }
+.nav--scrolled .nav-hamburger { color: var(--brown); }
 
 .nav-mobile {
   position: absolute;
@@ -104,7 +104,7 @@
   transition: color 0.2s;
 }
 
-.nav-mobile a:hover { color: #2a1d10; }
+.nav-mobile a:hover { color: var(--brown); }
 
 .nav-mobile-reserve {
   margin-top: 8px;

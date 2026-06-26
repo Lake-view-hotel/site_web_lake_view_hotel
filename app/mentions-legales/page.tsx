@@ -5,7 +5,9 @@ export default function MentionsLegalesPage() {
     <section className="mentions-section">
       <div className="mentions-wrapper">
         <div className="mentions-inner">
+          <a href="/" className="mentions-back">← Retour à l&apos;accueil</a>
           <h1>Mentions Légales</h1>
+          <div className="mentions-sep" />
 
           <div className="mentions-block">
             <div className="mentions-title-wrapper">

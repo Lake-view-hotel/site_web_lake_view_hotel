@@ -19,7 +19,7 @@
 
 /* ─── PANEL ─── */
 .modal-panel {
-  background: var(--dark-mid);
+  background: var(--bg-mid);
   border: 1px solid var(--border);
   border-radius: 4px;
   width: 100%;
@@ -57,7 +57,7 @@
   padding: 4px;
   line-height: 0;
 }
-.modal-close:hover { color: var(--cream); }
+.modal-close:hover { color: var(--brown); }
 
 /* ─── HEADER ─── */
 .modal-label {
@@ -69,7 +69,7 @@
 .modal-title {
   font-family: var(--font-serif), 'Cormorant Garamond', serif;
   font-size: 32px; font-weight: 300;
-  color: var(--cream); line-height: 1.1;
+  color: var(--brown); line-height: 1.1;
   margin-bottom: 8px;
 }
 
@@ -123,7 +123,7 @@
   padding: 12px 14px;
   font-family: var(--font-body), 'DM Sans', sans-serif;
   font-size: 13px; font-weight: 300;
-  color: var(--cream);
+  color: var(--brown);
   transition: border-color 0.2s;
   outline: none;
   width: 100%;
@@ -139,8 +139,8 @@
 }
 
 .modal-field select option {
-  background: #ece5d6;
-  color: #2a1d10;
+  background: var(--bg-mid);
+  color: var(--brown);
 }
 
 .modal-field input[type="date"] {
@@ -181,7 +181,7 @@
   margin-top: 8px;
   background: transparent;
   border: 1px solid rgba(176, 141, 90, 0.6);
-  color: var(--cream);
+  color: var(--brown);
   padding: 14px 32px;
   border-radius: 2px;
   font-family: var(--font-body), 'DM Sans', sans-serif;
